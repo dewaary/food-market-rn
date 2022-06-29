@@ -1,11 +1,10 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import { SplashScreen } from './screens';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hello Food Market</Text>
-    </View>
+    <SplashScreen />
   );
 };
 
