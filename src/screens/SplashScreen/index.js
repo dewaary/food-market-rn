@@ -1,8 +1,17 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Logo} from '../../assets';
 
-const SplashScreen = () => {
+const SplashScreen = ({navigation}) => {
+  // const navigation = useNavigation()
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate('SignIn')
+      console.log('ini time out');
+    }, 2000);
+    // props.navigation.navigate('SignIn')
+  }, [navigation]);
+
   return (
     <View style={styles.container}>
       <Logo />
@@ -21,9 +30,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFC700',
   },
   TextFood: {
-      fontSize: 32,
-      color: '#020202',
-      marginTop: 38,
-      fontFamily: 'Poppins-Medium'
-  }
+    fontSize: 32,
+    color: '#020202',
+    marginTop: 38,
+    fontFamily: 'Poppins-Medium',
+  },
 });
