@@ -6,7 +6,7 @@ const SplashScreen = ({navigation}) => {
   // const navigation = useNavigation()
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('SignIn')
+      navigation.navigate('SignIn');
       console.log('ini time out');
     }, 2000);
     // props.navigation.navigate('SignIn')
