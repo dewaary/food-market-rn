@@ -6,4 +6,5 @@ import SuccessSignUp from "./SuccessSignUp";
 import HomePage from "./HomePage";
 import Order from "./Order";
 import Profile from "./Profile";
-export {SplashScreen, SignIn, SignUp, SignUpAddress, SuccessSignUp, HomePage, Order, Profile}
+import FoodDetail from "./FoodDetail";
+export {SplashScreen, SignIn, SignUp, SignUpAddress, SuccessSignUp, HomePage, Order, Profile, FoodDetail}
