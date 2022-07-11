@@ -2,7 +2,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {Button, Gap, Header, SelectPicker, TextInput} from '../../components';
 
-const SignUpAddress = () => {
+const SignUpAddress = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
       <Header
@@ -20,9 +20,12 @@ const SignUpAddress = () => {
         <Gap height={16} />
         <TextInput label={'House No.'} placeholder={'Type your house number'} />
         <Gap height={24} />
-        <SelectPicker />
+        <SelectPicker label={'City'} />
         <Gap height={24} />
-        <Button text={'Sign Up Now'} />
+        <Button
+          text={'Sign Up Now'}
+          onPress={() => navigation.replace('SuccessSignUp')}
+        />
         <Gap height={12} />
       </View>
     </View>
