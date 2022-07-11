@@ -3,7 +3,7 @@ import React from 'react';
 import {FoodDummy1} from '../../../assets';
 import {Rating} from '..';
 
-const ItemListFood = ({image, onPress}) => {
+const ItemListFood = ({image, onPress, items, rating}) => {
   return (
     <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
 
@@ -13,7 +13,9 @@ const ItemListFood = ({image, onPress}) => {
         <Text style={styles.title}>Soup Bumil</Text>
         <Text style={styles.price}>IDR. 289.000</Text>
       </View>
-      <Rating />
+      {items && !rating && <Text style={styles.item}>{items} items</Text>}
+      {rating && !items && <Rating />}
+      
     </View>
     </TouchableOpacity>
   );
@@ -25,7 +27,6 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     backgroundColor: 'white',
-    paddingHorizontal: 24,
     paddingVertical: 8,
     alignItems: 'center',
   },
@@ -46,4 +47,9 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: '#8d92A3',
   },
+  item: {
+    fontFamily: 'Poppins-Regular',
+    fontSize: 13,
+    color: '#8d92A3',
+  }
 });
