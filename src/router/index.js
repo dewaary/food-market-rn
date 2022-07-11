@@ -5,6 +5,7 @@ import {
   FoodDetail,
   HomePage,
   Order,
+  OrderSuccess,
   OrderSummary,
   Profile,
   SignIn,
@@ -73,14 +74,19 @@ const Router = () => {
         component={MainApp}
         options={{headerShown: false}}
       />
-       <Stack.Screen
+      <Stack.Screen
         name="FoodDetail"
         component={FoodDetail}
         options={{headerShown: false}}
       />
-        <Stack.Screen
+      <Stack.Screen
         name="OrderSummary"
         component={OrderSummary}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="OrderSuccess"
+        component={OrderSuccess}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
