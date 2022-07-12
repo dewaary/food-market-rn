@@ -5,15 +5,13 @@ import {IcBack} from '../../../assets';
 const Header = ({title, subTitle, onPress, onBack}) => {
   return (
     <View style={styles.container}>
-      {
-        onBack && (
-          <TouchableOpacity activeOpacity={0.8} onPress={onPress}>
+      {onBack && (
+        <TouchableOpacity activeOpacity={0.8} onPress={onPress}>
           <View style={styles.back}>
             <IcBack />
           </View>
         </TouchableOpacity>
-        )
-      }
+      )}
       <View>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.subTitle}>{subTitle}</Text>

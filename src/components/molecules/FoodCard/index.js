@@ -1,12 +1,11 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {FoodDummy1, FoodDummy2, FoodDummy3, FoodDummy4, IcStarOff, IcStarOn} from '../../../assets';
-import { Rating } from '..';
+import {Rating} from '..';
 
 const FoodCard = ({image}) => {
   return (
     <View style={styles.container}>
-      <Image source={image} style={styles.imageFoodCard}/>
+      <Image source={image} style={styles.imageFoodCard} />
       <View style={styles.content}>
         <Text style={styles.text}>Cherry Healty</Text>
         <Rating />
@@ -33,7 +32,7 @@ const styles = StyleSheet.create({
   imageFoodCard: {
     width: 200,
     height: 140,
-    resizeMode: 'cover'
+    resizeMode: 'cover',
   },
   content: {
     padding: 12,

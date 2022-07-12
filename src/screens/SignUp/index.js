@@ -12,11 +12,11 @@ const SignUp = ({navigation}) => {
       />
       <View style={styles.container}>
         <View style={styles.photo}>
-        <View style={styles.borderPhoto}>
-          <View style={styles.photoContainer}>
-            <Text style={styles.addPhoto}>Add Phooto</Text>
+          <View style={styles.borderPhoto}>
+            <View style={styles.photoContainer}>
+              <Text style={styles.addPhoto}>Add Phooto</Text>
+            </View>
           </View>
-        </View>
         </View>
         <TextInput label={'Fullname'} placeholder={'Type your fullname'} />
         <Gap height={16} />
@@ -27,7 +27,10 @@ const SignUp = ({navigation}) => {
         <Gap height={16} />
         <TextInput label={'Password'} placeholder={'Type your password'} />
         <Gap height={24} />
-        <Button text={'Continue'} onPress={() => navigation.navigate('SignUpAddress')}/>
+        <Button
+          text={'Continue'}
+          onPress={() => navigation.navigate('SignUpAddress')}
+        />
       </View>
     </View>
   );
@@ -56,7 +59,7 @@ const styles = StyleSheet.create({
     borderRadius: 110,
     borderStyle: 'dashed',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   photoContainer: {
     width: 90,
@@ -70,5 +73,5 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Light',
     color: '#8D92A3',
     textAlign: 'center',
-  }
+  },
 });
